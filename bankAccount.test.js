@@ -16,9 +16,16 @@ describe('bankAccount', () => {
 
   describe('deposit', () => {
     it('increments account balance by deposit value', () => {
-      expect(account.balance).toEqual(0)
       account.deposit(100)
       expect(account.balance).toEqual(100)
+    })
+  })
+
+  describe('withdraw', () => {
+    it('reduces account balance by withdrawal value', () => {
+      account.deposit(100)
+      account.withdraw(50)
+      expect(account.balance).toEqual(50)
     })
   })
 })
