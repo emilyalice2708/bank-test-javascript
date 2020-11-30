@@ -12,9 +12,14 @@ describe('AccountHistory', () => {
   })
 
   describe('record', (() => {
-    it('updates history array with account change', () => {
-      accountHistory.record("deposit", 100)
-      expect(accountHistory.history).toEqual([{date: '21/10/2015', type: "deposit", amount: 100}])
+    it('updates history array with deposits', () => {
+      accountHistory.record("credit", 100)
+      expect(accountHistory.history).toEqual([{date: '21/10/2015', type: "credit", amount: 100}])
+    })
+
+    it('updates history array with withdrawals', () => {
+      accountHistory.record("debit", 50)
+      expect(accountHistory.history.pop()).toEqual({date: '21/10/2015', type: "debit", amount: 50})
     })
   }))
 
