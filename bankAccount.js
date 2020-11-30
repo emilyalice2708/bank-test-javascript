@@ -1,6 +1,9 @@
+import AccountHistory from './accountHistory.js'
+
 export default class BankAccount {
   constructor() {
     this.balance = 0
+    this.history = new AccountHistory();
   }
 
   balance() {
@@ -9,6 +12,7 @@ export default class BankAccount {
 
   deposit(amount) {
     this.balance += amount
+    this.history.record("deposit", amount)
   }
 
   withdraw(amount) {
