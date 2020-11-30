@@ -12,11 +12,12 @@ export default class BankAccount {
 
   deposit(amount) {
     this.balance += amount
-    this.history.record("deposit", amount)
+    this.history.record("credit", amount)
   }
 
   withdraw(amount) {
     this.balance -= amount
+    this.history.record("debit", amount)
   }
 }
 

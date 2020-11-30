@@ -14,6 +14,10 @@ describe('bankAccount', () => {
     mockHistory = new AccountHistory();
   })
 
+  afterEach(() => {
+    jest.clearAllMocks();
+  })
+
   it('begins with a bank balance of 0', () => {
     expect(account.balance).toEqual(0)
   })
@@ -26,7 +30,7 @@ describe('bankAccount', () => {
 
     it('calls record on account history', () => {
       account.deposit(50)
-      expect(mockHistory.record.mock.calls[0][0]).toEqual("deposit", 50)
+      expect(mockHistory.record.mock.calls[0][0]).toEqual("credit", 50)
     })
   })
 
@@ -35,6 +39,11 @@ describe('bankAccount', () => {
       account.deposit(100)
       account.withdraw(50)
       expect(account.balance).toEqual(50)
+    })
+
+    it('calls record on account history', () => {
+      account.withdraw(20)
+      expect(mockHistory.record.mock.calls[0][0]).toEqual("debit", 20)
     })
   })
 })
