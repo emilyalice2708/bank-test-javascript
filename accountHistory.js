@@ -4,6 +4,10 @@ export default class AccountHistory {
   }
 
   record(type, amount) {
-    
+    this.history.push({ type: type, amount: amount })
+  }
+
+  history() {
+    return this.history
   }
 }

@@ -1,7 +1,7 @@
 import BankAccount from './bankAccount.js';
 import AccountHistory from './accountHistory.js'
 
-import { jest } from '@jest/globals';
+//import { jest } from '@jest/globals';
 
 jest.mock('./accountHistory.js')
 
