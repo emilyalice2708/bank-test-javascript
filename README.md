@@ -1,6 +1,35 @@
 # Bank Tech Test in Javascript
 
 
+## Instructions
+
+### Getting started
+
+1. Clone the repository:
+```
+$ git clone https://github.com/emilyalice2708/bank-test-javascript
+```
+2. Move into the main directory:
+```
+$ cd bank-test-javascript
+```
+3. Run npm install:
+```
+$ npm install
+```
+4. Start the server:
+```
+$ npm start
+```
+Visit http://localhost:8080/ in the browser and open the Javascript console to use the program. After a new BankAccount class has been instantiated, a user can use the deposit, withdraw and printStatement methods to interact with the account.
+
+### Tests
+
+To run tests, after following steos 1-3 above, run npm test in the terminal:
+```
+$ npm test
+```
+
 ## Specification
 
 - Should be able to interact with code via the Javascript console.
