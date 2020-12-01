@@ -1,4 +1,4 @@
-import BankStatement from '../models/bankStatement.js';
+const BankStatement = require('./bankStatement.js')
 
 describe('BankStatement', () => {
   let bankStatement;

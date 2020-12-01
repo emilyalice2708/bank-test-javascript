@@ -1,7 +1,5 @@
 import Printer from './printer.js'
 import BankStatement from './bankStatement.js'
-// const { Printer } = require('./printer.js')
-// const { BankStatement } = require('./bankStatement.js')
 
 export default class BankAccount {
   constructor() {

@@ -1,7 +1,3 @@
-// import BankAccount from './bankAccount.js';
-// import BankStatement from './bankStatement.js'
-// const BankAccount = require('./bankAccount.js')
-// const BankStatement = require('./bankStatement.js')
 import BankStatement from '../models/bankStatement.js';
 import Printer from '../models/printer.js';
 import BankAccount from '../models/bankAccount.js';

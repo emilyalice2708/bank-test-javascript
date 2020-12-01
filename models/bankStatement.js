@@ -16,10 +16,6 @@ export default class BankStatement {
     this.statement.push({ date: date, credit: amount, debit: "", balance: balance })
   }
 
-  // statement() {
-  //   return this.statement
-  // }
-
   getCurrentDate() {
     let today = new Date();
     let date = today.getDate();
