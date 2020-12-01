@@ -7,11 +7,7 @@ export default class AccountStatement {
 
   record(type, amount, balance) {
     let date = this.getCurrentDate();
-    if(type === "debit") {
-      this.recordDebit(date, amount, balance)
-    } else {
-      this.recordCredit(date, amount, balance)
-    }
+    type === "debit" ? this.recordDebit(date, amount, balance) : this.recordCredit(date, amount, balance)
   }
 
   recordDebit(date, amount, balance) {

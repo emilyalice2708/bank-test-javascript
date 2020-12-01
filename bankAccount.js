@@ -7,10 +7,6 @@ export default class BankAccount {
     this.statement = new BankStatement();
   }
 
-  balance() {
-    return this.balance
-  }
-
   deposit(amount) {
     this.balance += amount
     this.statement.record("credit", amount, this.balance)
@@ -24,5 +20,11 @@ export default class BankAccount {
   Statement() {
     const printer = new Printer()
     printer.printStatement(this.statement)
+  }
+
+  private
+
+  balance() {
+    return this.balance
   }
 }
