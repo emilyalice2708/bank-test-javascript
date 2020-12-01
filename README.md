@@ -88,6 +88,12 @@ so that I can check specific transactions,
 I'd like each transaction to be printed with a date.
 ```
 
+```
+As a person,
+so that I don't go into overdraft,
+I'd like to be prevented from withdrawing more than is available to me.
+```
+
 | Bank Account |  Dependencies   |
 | ------------ | ----------------- |
 | Deposit      |  Bank Statement   |
