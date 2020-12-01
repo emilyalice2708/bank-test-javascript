@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "http-server",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "testTest": "jest tests/bankAccount.test.js"
   },
   "author": "",
   "license": "ISC",

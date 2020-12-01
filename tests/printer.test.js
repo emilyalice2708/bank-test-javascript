@@ -1,4 +1,4 @@
-import Printer from './printer.js'
+import Printer from '../models/printer.js'
 
 describe('Printer', () => {
   let printer;

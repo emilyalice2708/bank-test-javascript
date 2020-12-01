@@ -1,9 +1,13 @@
-import BankAccount from './bankAccount.js';
-import BankStatement from './bankStatement.js'
-import Printer from './printer.js'
+// import BankAccount from './bankAccount.js';
+// import BankStatement from './bankStatement.js'
+// const BankAccount = require('./bankAccount.js')
+// const BankStatement = require('./bankStatement.js')
+import BankStatement from '../models/bankStatement.js';
+import Printer from '../models/printer.js';
+import BankAccount from '../models/bankAccount.js';
 
-jest.mock('./bankStatement.js')
-jest.mock('./printer.js')
+jest.mock('../models/bankStatement.js')
+jest.mock('../models/printer.js')
 
 describe('BankAccount', () => {
   let account;
@@ -52,8 +56,8 @@ describe('BankAccount', () => {
 
   describe('printStatement', () => {
     it('calls for the printer class to print statement', () => {
-      account.Statement()
-      expect(mockPrinter.printStatement.mock.calls[0][0]).toEqual(mockStatement)
+      account.printStatement()
+      expect(mockPrinter.printStatement.mock.calls[0][0]).toEqual(["statement array"])
     })
   })
 })

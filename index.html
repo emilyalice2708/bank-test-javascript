@@ -6,8 +6,12 @@
   </head>
 
   <body>
-    <script type="module" src="bankAccount.js"></script>
-    <script type="module" src="accountHistory.js"></script>
-    <script type="module" src="printer.js"></script>
+    <script type="module">
+      import BankAccount from './models/bankAccount.js'
+      import BankStatement from './models/bankStatement.js'
+
+      window.BankAccount = BankAccount
+      window.BankStatement = BankStatement
+    </script>
   </body>
 </html>

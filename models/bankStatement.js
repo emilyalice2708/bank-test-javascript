@@ -1,9 +1,7 @@
-export default class AccountStatement {
+export default class BankStatement {
   constructor() {
     this.statement = []
   }
-
-  private
 
   record(type, amount, balance) {
     let date = this.getCurrentDate();
@@ -18,9 +16,9 @@ export default class AccountStatement {
     this.statement.push({ date: date, credit: amount, debit: "", balance: balance })
   }
 
-  statement() {
-    return this.statement
-  }
+  // statement() {
+  //   return this.statement
+  // }
 
   getCurrentDate() {
     let today = new Date();

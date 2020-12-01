@@ -1,6 +1,7 @@
-import BankStatement from './bankStatement';
+import BankStatement from '../models/bankStatement.js';
+//const { BankStatement } = require('../models/bankStatement.js')
 
-describe('AccountHistory', () => {
+describe('BankStatement', () => {
   let bankStatement;
   
   beforeEach(() => {

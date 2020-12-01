@@ -1,5 +1,7 @@
-import BankStatement from './bankStatement.js'
 import Printer from './printer.js'
+import BankStatement from './bankStatement.js'
+// const { Printer } = require('./printer.js')
+// const { BankStatement } = require('./bankStatement.js')
 
 export default class BankAccount {
   constructor() {
@@ -17,12 +19,10 @@ export default class BankAccount {
     this.statement.record("debit", amount, this.balance)
   }
 
-  Statement() {
-    const printer = new Printer()
-    printer.printStatement(this.statement)
+  printStatement() {
+    const printer = new Printer();
+    printer.printStatement(this.statement.statement);
   }
-
-  private
 
   balance() {
     return this.balance
