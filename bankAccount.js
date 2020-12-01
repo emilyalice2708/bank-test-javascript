@@ -13,12 +13,12 @@ export default class BankAccount {
 
   deposit(amount) {
     this.balance += amount
-    this.statement.record("credit", amount)
+    this.statement.record("credit", amount, this.balance)
   }
 
   withdraw(amount) {
     this.balance -= amount
-    this.statement.record("debit", amount)
+    this.statement.record("debit", amount, this.balance)
   }
 
   Statement() {

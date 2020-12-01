@@ -32,7 +32,7 @@ describe('BankAccount', () => {
 
     it('calls record on account history', () => {
       account.deposit(50)
-      expect(mockStatement.record.mock.calls[0][0]).toEqual("credit", 50)
+      expect(mockStatement.record).toHaveBeenCalledWith("credit", 50, 50)
     })
   })
 
@@ -44,8 +44,9 @@ describe('BankAccount', () => {
     })
 
     it('calls record on account history', () => {
+      account.deposit(100)
       account.withdraw(20)
-      expect(mockStatement.record.mock.calls[0][0]).toEqual("debit", 20)
+      expect(mockStatement.record).toHaveBeenCalledWith("debit", 20, 80)
     })
   })
 
