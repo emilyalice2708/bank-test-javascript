@@ -32,7 +32,7 @@ Visit http://localhost:8080/ in the browser and open the Javascript console to u
 
 ### Tests
 
-To run tests, after following steos 1-3 above, run npm test in the terminal:
+To run tests, after following steps 1-3 above, run npm test in the terminal:
 
 ```
 $ npm test
@@ -88,18 +88,18 @@ so that I can check specific transactions,
 I'd like each transaction to be printed with a date.
 ```
 
-| Bank Account |     |
-| ------------ | --- |
-| Deposit      |     |
-| Withdraw     |     |
-| Statement    |     |
+| Bank Account |  Dependencies   |
+| ------------ | ----------------- |
+| Deposit      |  Bank Statement   |
+| Withdraw     |  Bank Statement   |
+| Statement    |   Printer  |
 
-| Bank Statement       |     |
-| -------------------- | --- |
+| Bank Statement       |  Dependencies   |
+| -------------------- | -------------- |
 | Records transactions |     |
-| Records the date     |     |
+| Records the date     |   Date  |
 
-| Printer          |     |
-| ---------------- | --- |
+| Printer          |   Dependencies  |
+| ---------------- | -------------- |
 | Prints header    |     |
-| Prints statement |     |
+| Prints statement |   Bank Statement  |
