@@ -15,8 +15,12 @@ export default class BankAccount {
   }
 
   withdraw(amount) {
-    this.balance -= amount
-    this.statement.record("debit", amount, this.balance)
+    if(amount <= this.balance) {
+      this.balance -= amount
+     this.statement.record("debit", amount, this.balance)
+    } else { 
+      throw("Insufficient funds")
+    }
   }
 
   printStatement() {

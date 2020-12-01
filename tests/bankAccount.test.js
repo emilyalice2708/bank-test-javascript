@@ -52,6 +52,12 @@ describe('BankAccount', () => {
       account.withdraw(20)
       expect(mockStatement.record).toHaveBeenCalledWith("debit", 20, 80)
     })
+
+    it('raises an error if withdrawal value is more than current balance', () => {
+      expect(() => {
+        account.withdraw(50);
+      }).toThrow();
+    })
   })
 
   describe('printStatement', () => {
