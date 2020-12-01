@@ -5,9 +5,21 @@ export default class AccountStatement {
 
   private
 
-  record(type, amount) {
+  record(type, amount, balance) {
     let date = this.getCurrentDate();
-    this.statement.push({ date: date, type: type, amount: amount })
+    if(type === "debit") {
+      this.recordDebit(date, amount, balance)
+    } else {
+      this.recordCredit(date, amount, balance)
+    }
+  }
+
+  recordDebit(date, amount, balance) {
+    this.statement.push({ date: date, credit: "", debit: amount, balance: balance })
+  }
+
+  recordCredit(date, amount, balance) {
+    this.statement.push({ date: date, credit: amount, debit: "", balance: balance })
   }
 
   statement() {

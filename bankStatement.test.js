@@ -13,13 +13,13 @@ describe('AccountHistory', () => {
 
   describe('record', (() => {
     it('updates statement array with deposits', () => {
-      bankStatement.record("credit", 100)
-      expect(bankStatement.statement).toEqual([{date: '21/10/2015', type: "credit", amount: 100}])
+      bankStatement.record("credit", 100, 150)
+      expect(bankStatement.statement).toEqual([{date: '21/10/2015', credit: 100, debit: "", balance: 150}])
     })
 
     it('updates history array with withdrawals', () => {
-      bankStatement.record("debit", 50)
-      expect(bankStatement.statement.pop()).toEqual({date: '21/10/2015', type: "debit", amount: 50})
+      bankStatement.record("debit", 50, 20)
+      expect(bankStatement.statement.pop()).toEqual({date: '21/10/2015', debit: 50, credit: "", balance: 20})
     })
   }))
 
