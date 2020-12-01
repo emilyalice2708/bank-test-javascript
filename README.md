@@ -102,4 +102,4 @@ I'd like each transaction to be printed with a date.
 | Printer          |   Dependencies  |
 | ---------------- | -------------- |
 | Prints header    |     |
-| Prints statement |   Bank Statement  |
+| Prints statement |     |
