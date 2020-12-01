@@ -51,4 +51,18 @@ so that I can check specific transactions,
 I'd like each transaction to be printed with a date.
 ```
 
+|Bank Account||
+|----------|-----------|
+|Deposit||
+|Withdraw||
+|Statement||
 
+|Bank Statement||
+|----------|-----------|
+|Records transactions||
+|Records the date||
+
+|Printer||
+|----------|-----------|
+|Prints header||
+|Prints statement||
