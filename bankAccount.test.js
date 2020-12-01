@@ -1,15 +1,19 @@
 import BankAccount from './bankAccount.js';
-import AccountHistory from './accountHistory.js'
+import BankStatement from './bankStatement.js'
+import Printer from './printer.js'
 
-jest.mock('./accountHistory.js')
+jest.mock('./bankStatement.js')
+jest.mock('./printer.js')
 
-describe('bankAccount', () => {
+describe('BankAccount', () => {
   let account;
-  let mockHistory;
+  let mockStatement;
+  let mockPrinter;
 
   beforeEach(() => {
     account = new BankAccount();
-    mockHistory = new AccountHistory();
+    mockStatement = new BankStatement();
+    mockPrinter = new Printer();
   })
 
   afterEach(() => {
@@ -28,7 +32,7 @@ describe('bankAccount', () => {
 
     it('calls record on account history', () => {
       account.deposit(50)
-      expect(mockHistory.record.mock.calls[0][0]).toEqual("credit", 50)
+      expect(mockStatement.record.mock.calls[0][0]).toEqual("credit", 50)
     })
   })
 
@@ -41,7 +45,14 @@ describe('bankAccount', () => {
 
     it('calls record on account history', () => {
       account.withdraw(20)
-      expect(mockHistory.record.mock.calls[0][0]).toEqual("debit", 20)
+      expect(mockStatement.record.mock.calls[0][0]).toEqual("debit", 20)
+    })
+  })
+
+  describe('printStatement', () => {
+    it('calls for the printer class to print statement', () => {
+      account.Statement()
+      expect(mockPrinter.printStatement.mock.calls[0][0]).toEqual(mockStatement)
     })
   })
 })

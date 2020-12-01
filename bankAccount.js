@@ -1,9 +1,10 @@
-import AccountHistory from './accountHistory.js'
+import BankStatement from './bankStatement.js'
+import Printer from './printer.js'
 
 export default class BankAccount {
   constructor() {
     this.balance = 0
-    this.history = new AccountHistory();
+    this.statement = new BankStatement();
   }
 
   balance() {
@@ -12,13 +13,16 @@ export default class BankAccount {
 
   deposit(amount) {
     this.balance += amount
-    this.history.record("credit", amount)
+    this.statement.record("credit", amount)
   }
 
   withdraw(amount) {
     this.balance -= amount
-    this.history.record("debit", amount)
+    this.statement.record("debit", amount)
+  }
+
+  Statement() {
+    const printer = new Printer()
+    printer.printStatement(this.statement)
   }
 }
-
-//export { BankAccount };
