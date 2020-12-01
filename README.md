@@ -23,3 +23,32 @@ date || credit || debit || balance
 13/01/2012 || 2000.00 || || 3000.00
 10/01/2012 || 1000.00 || || 1000.00
 ```
+### Planning
+
+## User Stories
+
+```
+As a person, 
+so that I can add to my account,
+I'd like to be able to make a deposit.
+```
+
+```
+As a person,
+so that I can have cash when I need it,
+I'd like to be able to withdraw from my account.
+```
+
+```
+As a person,
+so that I can check my transaction history,
+I'd like to be able to print a bank statement.
+```
+
+```
+As a person,
+so that I can check specific transactions,
+I'd like each transaction to be printed with a date.
+```
+
+
