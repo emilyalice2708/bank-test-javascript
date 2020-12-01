@@ -1,31 +1,39 @@
 # Bank Tech Test in Javascript
 
-
 ## Instructions
 
 ### Getting started
 
 1. Clone the repository:
+
 ```
 $ git clone https://github.com/emilyalice2708/bank-test-javascript
 ```
+
 2. Move into the main directory:
+
 ```
 $ cd bank-test-javascript
 ```
+
 3. Run npm install:
+
 ```
 $ npm install
 ```
+
 4. Start the server:
+
 ```
 $ npm start
 ```
+
 Visit http://localhost:8080/ in the browser and open the Javascript console to use the program. After a new BankAccount class has been instantiated, a user can use the deposit, withdraw and printStatement methods to interact with the account.
 
 ### Tests
 
 To run tests, after following steos 1-3 above, run npm test in the terminal:
+
 ```
 $ npm test
 ```
@@ -39,7 +47,6 @@ $ npm test
 
 ### Acceptance Criteria
 
-
 Given a client makes a deposit of 1000 on 10-01-2012
 And a deposit of 2000 on 13-01-2012
 And a withdrawal of 500 on 14-01-2012
@@ -52,12 +59,13 @@ date || credit || debit || balance
 13/01/2012 || 2000.00 || || 3000.00
 10/01/2012 || 1000.00 || || 1000.00
 ```
+
 ### Planning
 
 ## User Stories
 
 ```
-As a person, 
+As a person,
 so that I can add to my account,
 I'd like to be able to make a deposit.
 ```
@@ -80,18 +88,18 @@ so that I can check specific transactions,
 I'd like each transaction to be printed with a date.
 ```
 
-|Bank Account||
-|----------|-----------|
-|Deposit||
-|Withdraw||
-|Statement||
+| Bank Account |     |
+| ------------ | --- |
+| Deposit      |     |
+| Withdraw     |     |
+| Statement    |     |
 
-|Bank Statement||
-|----------|-----------|
-|Records transactions||
-|Records the date||
+| Bank Statement       |     |
+| -------------------- | --- |
+| Records transactions |     |
+| Records the date     |     |
 
-|Printer||
-|----------|-----------|
-|Prints header||
-|Prints statement||
+| Printer          |     |
+| ---------------- | --- |
+| Prints header    |     |
+| Prints statement |     |

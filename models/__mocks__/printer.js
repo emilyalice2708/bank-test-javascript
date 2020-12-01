@@ -1,3 +1,2 @@
-export default class Printer{}
-Printer.prototype.printStatement = jest.fn()
-
+export default class Printer {}
+Printer.prototype.printStatement = jest.fn();
