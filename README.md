@@ -28,9 +28,8 @@ $ npm install
 $ npm start
 ```
 
-Visit http://localhost:8080/ in the browser and open the Javascript console to use the program. 
-
 ### Usage
+Visit http://localhost:8080/ in the browser, go to Developer Tools (View/Developer/Developer Tools or command/option/i if using a mac) and open the Javascript console to use the program. 
 
 Instantiating a new bank account:
 ```
