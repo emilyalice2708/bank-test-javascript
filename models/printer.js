@@ -5,16 +5,24 @@ export default class Printer {
       console.log(
         transaction.date +
           " || " +
-          transaction.credit +
+          this.format(transaction.credit) +
           " || " +
-          transaction.debit +
+          this.format(transaction.debit) +
           " || " +
-          transaction.balance
+          this.format(transaction.balance)
       );
     });
   }
 
   printHeader() {
     console.log("date || credit || debit || balance");
+  }
+
+  format(value) {
+    if(value !== "") {
+      return (Math.round(value * 100) / 100).toFixed(2);
+    } else {
+      return ""
+    }
   }
 }

@@ -35,10 +35,10 @@ describe("Printer", () => {
         "date || credit || debit || balance"
       );
       expect(global.console.log).toHaveBeenCalledWith(
-        "21/10/2015 ||  || 50 || 20"
+        "21/10/2015 ||  || 50.00 || 20.00"
       );
       expect(global.console.log).toHaveBeenCalledWith(
-        "21/10/2015 || 100 ||  || 150"
+        "21/10/2015 || 100.00 ||  || 150.00"
       );
     });
   });
