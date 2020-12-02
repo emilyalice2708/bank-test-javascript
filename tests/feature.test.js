@@ -1,5 +1,3 @@
-import BankStatement from "../models/bankStatement.js";
-import Printer from "../models/printer.js";
 import BankAccount from "../models/bankAccount.js";
 
 describe('Bank', () => {
