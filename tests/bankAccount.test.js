@@ -20,10 +20,6 @@ describe("BankAccount", () => {
     jest.clearAllMocks();
   });
 
-  it("begins with a bank balance of 0", () => {
-    expect(account.balance).toEqual(0);
-  });
-
   describe("deposit", () => {
     it("increments account balance by deposit value", () => {
       account.deposit(100);

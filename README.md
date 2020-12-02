@@ -28,7 +28,29 @@ $ npm install
 $ npm start
 ```
 
-Visit http://localhost:8080/ in the browser and open the Javascript console to use the program. After a new BankAccount class has been instantiated, a user can use the deposit, withdraw and printStatement methods to interact with the account.
+Visit http://localhost:8080/ in the browser and open the Javascript console to use the program. 
+
+### Usage
+
+Instantiating a new bank account:
+```
+account = new BankAccount();
+```
+
+Depositing into the account:
+```
+account.deposit(amount);
+```
+
+Withdrawing funds:
+```
+account.withdraw(amount);
+```
+
+Printing bank statement:
+```
+account.printStatement();
+```
 
 ### Tests
 
